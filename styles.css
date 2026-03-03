@@ -37,6 +37,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+  color: inherit;
+}
+
 main,
 .site-footer {
   width: min(1100px, 92vw);
@@ -82,6 +87,13 @@ main,
   display: flex;
   gap: 1.3rem;
   font-weight: 500;
+}
+
+.nav-link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .hero {
@@ -154,7 +166,6 @@ main,
   margin-top: 0.8rem;
 }
 
-.menu-section,
 .story-section,
 .visit-section {
   background: var(--surface);
@@ -179,6 +190,51 @@ main,
   border: 1px dashed #d8c3a0;
   border-radius: 16px;
   padding: 1rem;
+}
+
+.menu-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 34, 32, 0.55);
+  padding: 1rem;
+  z-index: 50;
+}
+
+.menu-modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.menu-modal-card {
+  width: min(960px, 100%);
+  max-height: 85vh;
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: clamp(1rem, 3vw, 1.6rem);
+}
+
+.menu-modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.menu-modal-close {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 ul {

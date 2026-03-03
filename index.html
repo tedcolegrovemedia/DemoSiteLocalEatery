@@ -22,7 +22,7 @@
         <div class="brand">Cinder & Sage</div>
         <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
         <nav id="main-nav" class="main-nav">
-          <a href="#menu">Menu</a>
+          <button class="nav-link-btn" type="button" data-open-menu>Menu</button>
           <a href="#story">Our Story</a>
           <a href="#visit">Visit</a>
         </nav>
@@ -40,7 +40,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#visit">Book a Table</a>
-            <a class="btn btn-secondary" href="#menu">See Menu</a>
+            <button class="btn btn-secondary" type="button" data-open-menu>See Menu</button>
           </div>
         </div>
         <div class="hero-card">
@@ -48,39 +48,6 @@
           <p class="feature-title">Smoked Tomato Bucatini</p>
           <p>House pasta, charred cherry tomatoes, basil oil, whipped ricotta.</p>
           <p class="feature-price">$19</p>
-        </div>
-      </section>
-
-      <section id="menu" class="menu-section">
-        <div class="section-head">
-          <p class="eyebrow">Sample Menu</p>
-          <h2>Seasonal Favorites</h2>
-        </div>
-        <div class="menu-grid">
-          <article>
-            <h3>Starters</h3>
-            <ul>
-              <li><span>Roasted Carrot Hummus</span><b>$10</b></li>
-              <li><span>Crispy Calamari</span><b>$14</b></li>
-              <li><span>Grilled Flatbread</span><b>$12</b></li>
-            </ul>
-          </article>
-          <article>
-            <h3>Mains</h3>
-            <ul>
-              <li><span>Oak-Fire Half Chicken</span><b>$24</b></li>
-              <li><span>Smoked Tomato Bucatini</span><b>$19</b></li>
-              <li><span>Seared Market Fish</span><b>$29</b></li>
-            </ul>
-          </article>
-          <article>
-            <h3>Drinks</h3>
-            <ul>
-              <li><span>Citrus Rosemary Soda</span><b>$6</b></li>
-              <li><span>House Sangria</span><b>$11</b></li>
-              <li><span>Cold Brew Tonic</span><b>$7</b></li>
-            </ul>
-          </article>
         </div>
       </section>
 
@@ -111,6 +78,51 @@
         </div>
       </section>
     </main>
+
+    <div
+      id="menu-modal"
+      class="menu-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="menu-modal-title"
+      aria-hidden="true"
+    >
+      <div class="menu-modal-card">
+        <div class="menu-modal-head">
+          <div class="section-head">
+            <p class="eyebrow">Sample Menu</p>
+            <h2 id="menu-modal-title">Seasonal Favorites</h2>
+          </div>
+          <button class="menu-modal-close" type="button" aria-label="Close menu">Close</button>
+        </div>
+        <div class="menu-grid">
+          <article>
+            <h3>Starters</h3>
+            <ul>
+              <li><span>Roasted Carrot Hummus</span><b>$10</b></li>
+              <li><span>Crispy Calamari</span><b>$14</b></li>
+              <li><span>Grilled Flatbread</span><b>$12</b></li>
+            </ul>
+          </article>
+          <article>
+            <h3>Mains</h3>
+            <ul>
+              <li><span>Oak-Fire Half Chicken</span><b>$24</b></li>
+              <li><span>Smoked Tomato Bucatini</span><b>$19</b></li>
+              <li><span>Seared Market Fish</span><b>$29</b></li>
+            </ul>
+          </article>
+          <article>
+            <h3>Drinks</h3>
+            <ul>
+              <li><span>Citrus Rosemary Soda</span><b>$6</b></li>
+              <li><span>House Sangria</span><b>$11</b></li>
+              <li><span>Cold Brew Tonic</span><b>$7</b></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <p>© <span id="year"></span> Cinder & Sage. Crafted for good company.</p>
