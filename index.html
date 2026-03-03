@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinder & Sage | Neighborhood Kitchen</title>
+    <meta
+      name="description"
+      content="Cinder & Sage is a local eatery serving wood-fired comfort food, seasonal plates, and handcrafted drinks."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">Cinder & Sage</div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Neighborhood Kitchen</p>
+          <h1>Wood-Fired Dishes. Warm Tables. Real Local Flavor.</h1>
+          <p>
+            From sunrise pastries to late-night small plates, Cinder & Sage brings together fresh
+            ingredients from nearby farms and the people who call this block home.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#visit">Book a Table</a>
+            <a class="btn btn-secondary" href="#menu">See Menu</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Tonight's Feature</h2>
+          <p class="feature-title">Smoked Tomato Bucatini</p>
+          <p>House pasta, charred cherry tomatoes, basil oil, whipped ricotta.</p>
+          <p class="feature-price">$19</p>
+        </div>
+      </section>
+
+      <section id="menu" class="menu-section">
+        <div class="section-head">
+          <p class="eyebrow">Sample Menu</p>
+          <h2>Seasonal Favorites</h2>
+        </div>
+        <div class="menu-grid">
+          <article>
+            <h3>Starters</h3>
+            <ul>
+              <li><span>Roasted Carrot Hummus</span><b>$10</b></li>
+              <li><span>Crispy Calamari</span><b>$14</b></li>
+              <li><span>Grilled Flatbread</span><b>$12</b></li>
+            </ul>
+          </article>
+          <article>
+            <h3>Mains</h3>
+            <ul>
+              <li><span>Oak-Fire Half Chicken</span><b>$24</b></li>
+              <li><span>Smoked Tomato Bucatini</span><b>$19</b></li>
+              <li><span>Seared Market Fish</span><b>$29</b></li>
+            </ul>
+          </article>
+          <article>
+            <h3>Drinks</h3>
+            <ul>
+              <li><span>Citrus Rosemary Soda</span><b>$6</b></li>
+              <li><span>House Sangria</span><b>$11</b></li>
+              <li><span>Cold Brew Tonic</span><b>$7</b></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="story" class="story-section">
+        <div class="section-head">
+          <p class="eyebrow">Who We Are</p>
+          <h2>Built by Locals, for Locals</h2>
+        </div>
+        <p>
+          Cinder & Sage started as a weekend pop-up and grew into a full-time neighborhood dining
+          room. We focus on simple techniques, bold flavors, and hospitality that feels like your
+          favorite corner table.
+        </p>
+      </section>
+
+      <section id="visit" class="visit-section">
+        <div>
+          <p class="eyebrow">Plan Your Visit</p>
+          <h2>Find Us in the Heart of River District</h2>
+          <p>245 Market Lane, River District</p>
+          <p>(555) 014-6734 • hello@cinderandsage.com</p>
+        </div>
+        <div class="hours">
+          <h3>Hours</h3>
+          <ul>
+            <li><span>Mon - Thu</span><b>11am - 9pm</b></li>
+            <li><span>Fri - Sat</span><b>11am - 11pm</b></li>
+            <li><span>Sunday</span><b>10am - 8pm</b></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Cinder & Sage. Crafted for good company.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
