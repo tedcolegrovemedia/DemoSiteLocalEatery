@@ -195,16 +195,23 @@ main,
 .menu-modal {
   position: fixed;
   inset: 0;
-  display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(30, 34, 32, 0.55);
+  background: rgba(94, 62, 35, 0.62);
   padding: 1rem;
   z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    visibility 220ms ease;
 }
 
 .menu-modal[aria-hidden="false"] {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .menu-modal-card {
@@ -215,6 +222,12 @@ main,
   border: 1px solid var(--line);
   border-radius: 24px;
   padding: clamp(1rem, 3vw, 1.6rem);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 220ms ease;
+}
+
+.menu-modal[aria-hidden="false"] .menu-modal-card {
+  transform: translateY(0) scale(1);
 }
 
 .menu-modal-head {
