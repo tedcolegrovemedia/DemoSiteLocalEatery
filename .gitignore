@@ -1,0 +1,4 @@
+.ftp-deploy.env
+.ftp-watch.pid
+ftp-watch.log
+.DS_Store
