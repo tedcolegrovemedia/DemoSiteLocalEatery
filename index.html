@@ -95,8 +95,14 @@
           </div>
           <button class="menu-modal-close" type="button" aria-label="Close menu">Close</button>
         </div>
+        <div class="menu-filters" role="group" aria-label="Filter menu categories">
+          <button class="menu-filter is-active" type="button" data-menu-filter="all">All</button>
+          <button class="menu-filter" type="button" data-menu-filter="starters">Starters</button>
+          <button class="menu-filter" type="button" data-menu-filter="mains">Mains</button>
+          <button class="menu-filter" type="button" data-menu-filter="drinks">Drinks</button>
+        </div>
         <div class="menu-grid">
-          <article>
+          <article data-menu-category="starters">
             <h3>Starters</h3>
             <ul>
               <li><span>Roasted Carrot Hummus</span><b>$10</b></li>
@@ -104,7 +110,7 @@
               <li><span>Grilled Flatbread</span><b>$12</b></li>
             </ul>
           </article>
-          <article>
+          <article data-menu-category="mains">
             <h3>Mains</h3>
             <ul>
               <li><span>Oak-Fire Half Chicken</span><b>$24</b></li>
@@ -112,7 +118,7 @@
               <li><span>Seared Market Fish</span><b>$29</b></li>
             </ul>
           </article>
-          <article>
+          <article data-menu-category="drinks">
             <h3>Drinks</h3>
             <ul>
               <li><span>Citrus Rosemary Soda</span><b>$6</b></li>

@@ -238,6 +238,41 @@ main,
   gap: 1rem;
 }
 
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+}
+
+.menu-filter {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.menu-filter:hover {
+  transform: translateY(-1px);
+}
+
+.menu-filter.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.menu-grid article[hidden] {
+  display: none;
+}
+
 .menu-modal-close {
   border: 1px solid var(--line);
   background: #fff;

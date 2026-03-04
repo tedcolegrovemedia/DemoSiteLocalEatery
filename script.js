@@ -8,6 +8,8 @@ const nav = document.querySelector(".main-nav");
 const menuModal = document.getElementById("menu-modal");
 const openMenuButtons = document.querySelectorAll("[data-open-menu]");
 const closeMenuButton = document.querySelector(".menu-modal-close");
+const filterButtons = document.querySelectorAll("[data-menu-filter]");
+const menuSections = document.querySelectorAll("[data-menu-category]");
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
@@ -52,4 +54,21 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenuModal();
   }
+});
+
+function applyMenuFilter(category) {
+  menuSections.forEach((section) => {
+    const matches = category === "all" || section.dataset.menuCategory === category;
+    section.hidden = !matches;
+  });
+
+  filterButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.menuFilter === category);
+  });
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    applyMenuFilter(button.dataset.menuFilter || "all");
+  });
 });
