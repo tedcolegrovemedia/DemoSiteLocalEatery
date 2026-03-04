@@ -128,8 +128,16 @@ $primaryCtaLink = sanitize_href((string) $hero['primaryCtaLink'], '#visit');
       <p>© <span id="year"></span> <?= esc((string) $site['brand']) ?>. <?= esc((string) $site['footer']) ?></p>
     </footer>
 
-    <button id="accessibility-toggle" class="accessibility-toggle accessibility-toggle-floating" type="button" aria-pressed="false">
-      Accessible Version
+    <button
+      id="accessibility-toggle"
+      class="accessibility-toggle accessibility-toggle-floating"
+      type="button"
+      aria-pressed="false"
+      aria-label="Enable accessible version"
+      title="Enable accessible version"
+    >
+      <span class="accessibility-icon" aria-hidden="true">♿</span>
+      <span class="sr-only">Accessible version toggle</span>
     </button>
 
     <script src="script.js"></script>

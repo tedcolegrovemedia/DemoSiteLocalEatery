@@ -79,7 +79,9 @@ function setAccessibleMode(enabled) {
   document.body.classList.toggle("accessible-mode", enabled);
   if (accessibilityToggle) {
     accessibilityToggle.setAttribute("aria-pressed", String(enabled));
-    accessibilityToggle.textContent = enabled ? "Standard Version" : "Accessible Version";
+    const label = enabled ? "Disable accessible version" : "Enable accessible version";
+    accessibilityToggle.setAttribute("aria-label", label);
+    accessibilityToggle.setAttribute("title", label);
   }
 }
 
