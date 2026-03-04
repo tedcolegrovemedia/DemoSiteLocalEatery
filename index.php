@@ -37,7 +37,6 @@ $primaryCtaLink = sanitize_href((string) $hero['primaryCtaLink'], '#visit');
           <button class="nav-link-btn" type="button" data-open-menu>Menu</button>
           <a href="#story">Our Story</a>
           <a href="#visit">Visit</a>
-          <button id="accessibility-toggle" class="accessibility-toggle" type="button" aria-pressed="false">Accessible Version</button>
           <a href="admin.php">Admin</a>
         </nav>
       </div>
@@ -128,6 +127,10 @@ $primaryCtaLink = sanitize_href((string) $hero['primaryCtaLink'], '#visit');
     <footer class="site-footer">
       <p>© <span id="year"></span> <?= esc((string) $site['brand']) ?>. <?= esc((string) $site['footer']) ?></p>
     </footer>
+
+    <button id="accessibility-toggle" class="accessibility-toggle accessibility-toggle-floating" type="button" aria-pressed="false">
+      Accessible Version
+    </button>
 
     <script src="script.js"></script>
   </body>
