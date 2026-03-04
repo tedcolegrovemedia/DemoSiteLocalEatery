@@ -10,6 +10,8 @@ const openMenuButtons = document.querySelectorAll("[data-open-menu]");
 const closeMenuButton = document.querySelector(".menu-modal-close");
 const filterButtons = document.querySelectorAll("[data-menu-filter]");
 const menuSections = document.querySelectorAll("[data-menu-category]");
+const accessibilityToggle = document.getElementById("accessibility-toggle");
+const accessibilityStorageKey = "eatery_accessible_mode";
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
@@ -72,3 +74,22 @@ filterButtons.forEach((button) => {
     applyMenuFilter(button.dataset.menuFilter || "all");
   });
 });
+
+function setAccessibleMode(enabled) {
+  document.body.classList.toggle("accessible-mode", enabled);
+  if (accessibilityToggle) {
+    accessibilityToggle.setAttribute("aria-pressed", String(enabled));
+    accessibilityToggle.textContent = enabled ? "Standard Version" : "Accessible Version";
+  }
+}
+
+if (accessibilityToggle) {
+  const saved = localStorage.getItem(accessibilityStorageKey) === "true";
+  setAccessibleMode(saved);
+
+  accessibilityToggle.addEventListener("click", () => {
+    const enabled = !document.body.classList.contains("accessible-mode");
+    setAccessibleMode(enabled);
+    localStorage.setItem(accessibilityStorageKey, String(enabled));
+  });
+}

@@ -11,6 +11,7 @@ $menuModal = $content['menuModal'];
 $menuCategories = $content['menuCategories'];
 $story = $content['story'];
 $visit = $content['visit'];
+$primaryCtaLink = sanitize_href((string) $hero['primaryCtaLink'], '#visit');
 ?>
 <!doctype html>
 <html lang="en">
@@ -36,6 +37,7 @@ $visit = $content['visit'];
           <button class="nav-link-btn" type="button" data-open-menu>Menu</button>
           <a href="#story">Our Story</a>
           <a href="#visit">Visit</a>
+          <button id="accessibility-toggle" class="accessibility-toggle" type="button" aria-pressed="false">Accessible Version</button>
           <a href="admin.php">Admin</a>
         </nav>
       </div>
@@ -48,7 +50,7 @@ $visit = $content['visit'];
           <h1><?= esc((string) $hero['headline']) ?></h1>
           <p><?= esc((string) $hero['description']) ?></p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="<?= esc((string) $hero['primaryCtaLink']) ?>"><?= esc((string) $hero['primaryCtaLabel']) ?></a>
+            <a class="btn btn-primary" href="<?= esc($primaryCtaLink) ?>"><?= esc((string) $hero['primaryCtaLabel']) ?></a>
             <button class="btn btn-secondary" type="button" data-open-menu><?= esc((string) $hero['menuCtaLabel']) ?></button>
           </div>
         </div>

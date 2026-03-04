@@ -96,6 +96,21 @@ main,
   cursor: pointer;
 }
 
+.accessibility-toggle {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.accessibility-toggle[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
 .hero {
   display: grid;
   gap: 2rem;
@@ -343,6 +358,53 @@ li:last-child {
   text-align: center;
   padding: 1.2rem 0 2rem;
   color: var(--ink-soft);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+body.accessible-mode {
+  background: #f9f7ef;
+  color: #141414;
+  font-size: 112%;
+  line-height: 1.7;
+}
+
+body.accessible-mode a {
+  text-decoration: underline;
+}
+
+body.accessible-mode .site-header,
+body.accessible-mode .story-section,
+body.accessible-mode .visit-section,
+body.accessible-mode .menu-modal-card {
+  background: #fff;
+  border-color: #2f2f2f;
+}
+
+body.accessible-mode .btn-primary,
+body.accessible-mode .menu-filter.is-active,
+body.accessible-mode .accessibility-toggle[aria-pressed="true"] {
+  background: #1f1f1f;
+  border-color: #1f1f1f;
+  color: #fff;
+}
+
+body.accessible-mode * {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (max-width: 820px) {
