@@ -245,6 +245,23 @@ main,
   padding: 0.45rem 0.8rem;
   font-weight: 700;
   cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.menu-modal-close:hover {
+  transform: translateY(-1px) scale(1.04);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.menu-modal-close:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 2px;
 }
 
 body.modal-open {
