@@ -2,3 +2,5 @@
 .ftp-watch.pid
 ftp-watch.log
 .DS_Store
+.preview.log
+.preview.pid

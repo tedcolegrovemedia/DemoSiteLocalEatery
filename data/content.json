@@ -1,0 +1,108 @@
+{
+    "site": {
+        "title": "Cinder & Sage | Neighborhood Kitchen",
+        "description": "Cinder & Sage is a local eatery serving wood-fired comfort food, seasonal plates, and handcrafted drinks.",
+        "brand": "Cinder & Sage",
+        "footer": "Crafted for good company."
+    },
+    "hero": {
+        "eyebrow": "Neighborhood Kitchen",
+        "headline": "Get your ticket to flavor town.",
+        "description": "From sunrise pastries to late-night small plates, Cinder & Sage brings together fresh ingredients from nearby farms and the people who call this block home.",
+        "primaryCtaLabel": "Book a Table",
+        "primaryCtaLink": "#visit",
+        "menuCtaLabel": "See Menu"
+    },
+    "feature": {
+        "heading": "Tonight's Feature",
+        "title": "Smoked Tomato Bucatini",
+        "description": "House pasta, charred cherry tomatoes, basil oil, whipped ricotta.",
+        "price": "$19"
+    },
+    "menuModal": {
+        "eyebrow": "Sample Menu",
+        "title": "Seasonal Favorites"
+    },
+    "menuCategories": [
+        {
+            "id": "starters",
+            "label": "Starters",
+            "items": [
+                {
+                    "name": "Roasted Carrot Hummus",
+                    "price": "$10"
+                },
+                {
+                    "name": "Crispy Calamari",
+                    "price": "$14"
+                },
+                {
+                    "name": "Grilled Flatbread",
+                    "price": "$12"
+                }
+            ]
+        },
+        {
+            "id": "mains",
+            "label": "Mains",
+            "items": [
+                {
+                    "name": "Oak-Fire Half Chicken",
+                    "price": "$24"
+                },
+                {
+                    "name": "Smoked Tomato Bucatini",
+                    "price": "$19"
+                },
+                {
+                    "name": "Seared Market Fish",
+                    "price": "$29"
+                }
+            ]
+        },
+        {
+            "id": "drinks",
+            "label": "Drinks",
+            "items": [
+                {
+                    "name": "Citrus Rosemary Soda",
+                    "price": "$6"
+                },
+                {
+                    "name": "House Sangria",
+                    "price": "$11"
+                },
+                {
+                    "name": "Cold Brew Tonic",
+                    "price": "$7"
+                }
+            ]
+        }
+    ],
+    "story": {
+        "eyebrow": "Who We Are",
+        "title": "Built by Locals, for Locals",
+        "body": "Cinder & Sage started as a weekend pop-up and grew into a full-time neighborhood dining room. We focus on simple techniques, bold flavors, and hospitality that feels like your favorite corner table."
+    },
+    "visit": {
+        "eyebrow": "Plan Your Visit",
+        "title": "Find Us in the Heart of River District",
+        "address": "245 Market Lane, River District",
+        "contact": "(555) 014-6734 • hello@cinderandsage.com",
+        "hoursTitle": "Hours",
+        "hours": [
+            {
+                "day": "Mon - Thu",
+                "time": "11am - 9pm"
+            },
+            {
+                "day": "Fri - Sat",
+                "time": "11am - 11pm"
+            },
+            {
+                "day": "Sunday",
+                "time": "10am - 8pm"
+            }
+        ]
+    }
+}

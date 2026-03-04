@@ -1,41 +1,61 @@
 # DemoSiteLocalEatery
 
-A responsive demo website for a local eatery.
+A responsive demo website for a local eatery with a lightweight PHP + JSON admin editor.
 
-## Overview
-This project is a lightweight, static restaurant landing page built with plain HTML, CSS, and JavaScript.
-
-### Features
-- Hero section with call-to-action buttons
-- Sample seasonal menu cards
-- About/Story section
-- Visit section with contact details and hours
-- Mobile-friendly navigation toggle
+## Stack
+- PHP (server-rendered homepage and admin save handler)
+- JavaScript (modal/menu interactions and admin category UI)
+- JSON (`data/content.json`) as content storage
 
 ## Project Structure
-- `index.html` - main page markup
-- `styles.css` - visual design and responsive layout
-- `script.js` - mobile nav toggle and dynamic footer year
+- `index.php` - homepage rendered from JSON content
+- `admin.php` - content management page
+- `lib/content.php` - shared content load/save helpers
+- `data/content.json` - editable site content data
+- `styles.css` - homepage styles
+- `admin.css` - admin interface styles
+- `script.js` - homepage interactivity
+- `scripts/` - FTP deploy/watch utilities
 
 ## Run Locally
-Because this is a static site, you can run it directly:
-
-1. Open `index.html` in your browser.
-
-Optional (local server):
+Start a local PHP server from the project root:
 
 ```bash
-python3 -m http.server 8000
+php -S 127.0.0.1:8080 -t .
 ```
 
-Then visit `http://localhost:8000`.
+Then open:
+- Site: `http://127.0.0.1:8080/index.php`
+- Admin: `http://127.0.0.1:8080/admin.php`
 
-## Customize
-Update the following in `index.html` to adapt this demo for a real business:
-- Restaurant name and branding text
-- Menu items and pricing
-- Address, phone, email, and hours
-- Featured dish content
+## How Content Editing Works
+1. Open `admin.php`.
+2. Edit any section fields.
+3. Click **Save Content**.
+4. The form writes changes to `data/content.json`.
+5. `index.php` reads that JSON and reflects updates immediately.
+
+### Menu Editing Format
+In Admin, menu items are entered one per line using:
+
+`Item Name|Price`
+
+Example:
+
+`Smoked Wings|$14`
+
+### Hours Editing Format
+Hours are entered one per line using:
+
+`Day|Time`
+
+Example:
+
+`Mon - Thu|11am - 9pm`
+
+## FTP Auto-Deploy
+A git post-commit hook is configured to run `scripts/ftp_deploy.sh` after each commit.
+Credentials are stored locally in `.ftp-deploy.env` and are gitignored.
 
 ## License
 For demo and educational use.
